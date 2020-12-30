@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "site": "eswofficial",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+
+}

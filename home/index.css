@@ -15,6 +15,52 @@
     margin: auto;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    width: 45px;
+    height: 42px;
+    background: #2193b0;
+    border-radius: 7px;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+.scroll-up-btn i{
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.bounce-4 {
+    animation-name: bounce-4;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce-4 {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-7px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
 
 
 /*   NAVIGATION   */
@@ -47,6 +93,7 @@
 }
 
 #navigation .navbar .menu li a{
+    display: block;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -584,6 +631,193 @@
 
 
 
+/*   CONTACT   */
+#contact {
+    padding: 100px 0;
+}
+
+#contact .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+#contact .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 230px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+#contact .title::after{
+    content: "talk to me";
+    position: absolute;
+    bottom: -18px;
+    font-size: 20px;
+    color: #2193b0;
+    left: 50%;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+#contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+#contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+#contact .contact-content .left p{
+    text-align: justify;
+}
+
+#contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+
+#contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+#contact .contact-content .row .info{
+    margin-left: 10px;
+}
+
+#contact .contact-content .row i{
+    font-size: 25px;
+    color: #2193b0;
+}
+
+#contact .contact-content .row .info .head{
+    font-weight: 700;
+}
+
+#contact .contact-content .row .info .sub-title {
+    color: #333;
+}
+
+#contact .contact-content .right form .fields{
+    display: flex;
+}
+
+#contact .contact-content .right form .field,
+#contact .contact-content .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#contact .contact-content .right form .name{
+    margin-right: 10px;
+}
+
+#contact .contact-content .right form .email{
+    margin-left: 10px;
+}
+
+#contact .contact-content .right form .phone{
+    margin-right: 10px;
+}
+
+#contact .contact-content .right form .subject{
+    margin-right: 10px;
+}
+
+#contact .contact-content .right form .textarea{
+    height: 80px;
+
+}
+
+#contact .contact-content .right form .fields .field input,
+#contact .contact-content .right form .field input,
+#contact .contact-content .right form textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;  
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+}
+
+#contact .contact-content .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+#contact .contact-content .right form .button{
+    height: 47px;
+    width: 100%;
+}
+
+#contact .contact-content .right form .button button{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #2193b0;
+    background: #2193b0;
+    border-radius: 7px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+#contact .contact-content .right form .button button:hover{
+    background: transparent;
+    color: #2193b0;
+}
+
+
+
+
+
+/*   FOOTER   */
+footer{
+    color: #fff;
+    background: #111;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    text-align: center;
+}  
+
+footer span a{
+    color: #2193b0;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
 
 
 
@@ -730,6 +964,10 @@
     }
 
     #skills .skills-content .column{
+        width: 100%;
+    }
+
+    #contact .contact-content .column{
         width: 100%;
     }
 }

@@ -970,6 +970,12 @@ footer span a:hover{
     #contact .contact-content .column{
         width: 100%;
     }
+
+    /*   projects   */
+    #projects .title{
+        font-size: 30px;
+        margin-bottom: 66px;
+    }
 }
 
 @media (max-width: 500px){

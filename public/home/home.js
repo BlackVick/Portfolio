@@ -62,11 +62,10 @@ $(document).ready(function () {
   //typed animation script
   var typed = new Typed(".typing", {
     strings: [
-      "Software Engineer",
-      "Android Developer",
-      "Game Developer",
-      "Professional Gamer",
-      "Project Manager",
+      "an Android Developer",
+      "a Frontend Engineer",
+      "a Backend Engineer",
+      "a Game Developer",
     ],
     typeSpeed: 100,
     backSpeed: 60,
@@ -76,11 +75,10 @@ $(document).ready(function () {
   //typed animation script 2nd
   var typed = new Typed(".typing-2", {
     strings: [
-      "Software Engineer",
-      "Android Developer",
-      "Game Developer",
-      "Professional Gamer",
-      "Project Manager",
+      "an Android Developer",
+      "a Frontend Engineer",
+      "a Backend Engineer",
+      "a Game Developer",
     ],
     typeSpeed: 100,
     backSpeed: 60,
